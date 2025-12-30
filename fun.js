@@ -1,1 +1,1 @@
-console.log("JavaScript file linked successfully.");
+document.writeln("Hello from fun.js");
