@@ -3,89 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar - Inline CSS</title>
-    <link rel="stylesheet" href="steyling.css">
-    <script src="fun.js" defer></script>
+    <title>Krushi Shop - Responsive Navbar</title>
 </head>
-<body style="margin: 0; font-family: Arial, sans-serif; padding-top: 70px;">
-    <nav style="position: fixed; top: 0; width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); box-shadow: 0 2px 10px rgba(0,0,0,0.2); z-index: 1000;">
-        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px;">
+<body style="margin: 0; font-family: Arial, sans-serif; padding-top: 80px; background: #f8f9fa;">
+    <nav style="position: fixed; top: 0; width: 100%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 15px 20px;">
             <!-- Logo -->
-            <div style="font-size: 1.8em; font-weight: bold; color: white;">
+            <div style="font-size: 1.8em; font-weight: bold; color: white; flex-shrink: 0;">
                 🌾 Krushi Shop
             </div>
             
-            <!-- Desktop Menu -->
-            <ul id="nav-menu" style="list-style: none; margin: 0; padding: 0; display: flex; gap: 30px;">
-                <li><a href="index.html" style="color: white; text-decoration: none; padding: 10px 15px; border-radius: 25px; transition: all 0.3s; font-weight: 500;">Home</a></li>
-                <li><a href="#products" style="color: white; text-decoration: none; padding: 10px 15px; border-radius: 25px; transition: all 0.3s; font-weight: 500;">Products</a></li>
-                <li><a href="#about" style="color: white; text-decoration: none; padding: 10px 15px; border-radius: 25px; transition: all 0.3s; font-weight: 500;">About</a></li>
-                <li><a href="#services" style="color: white; text-decoration: none; padding: 10px 15px; border-radius: 25px; transition: all 0.3s; font-weight: 500;">Services</a></li>
-                <li><a href="cont.html" style="color: white; text-decoration: none; padding: 10px 15px; border-radius: 25px; transition: all 0.3s; font-weight: 500;">Contact</a></li>
-            </ul>
-            
-            <!-- Right side buttons -->
-            <div style="display: flex; gap: 15px; align-items: center;">
-                <a href="#cart" style="background: rgba(255,255,255,0.2); color: white; padding: 10px 20px; border-radius: 25px; text-decoration: none; font-weight: bold; transition: all 0.3s;">🛒 Cart (0)</a>
-                <div id="hamburger" style="display: none; flex-direction: column; cursor: pointer; gap: 4px;">
-                    <span style="width: 25px; height: 3px; background: white; border-radius: 2px; transition: 0.3s;"></span>
-                    <span style="width: 25px; height: 3px; background: white; border-radius: 2px; transition: 0.3s;"></span>
-                    <span style="width: 25px; height: 3px; background: white; border-radius: 2px; transition: 0.3s;"></span>
-                </div>
+            <!-- All Navigation Links - Responsive with flex-wrap -->
+            <div style="display: flex; gap: 15px; align-items: center; flex-wrap: wrap; justify-content: center; flex: 1;">
+                <a href="index.html" style="color: white; text-decoration: none; padding: 12px 20px; border-radius: 25px; background: rgba(255,255,255,0.15); font-weight: 500; font-size: 16px; transition: all 0.3s; white-space: nowrap;">🏠 Home</a>
+                <a href="#products" style="color: white; text-decoration: none; padding: 12px 20px; border-radius: 25px; background: rgba(255,255,255,0.15); font-weight: 500; font-size: 16px; transition: all 0.3s; white-space: nowrap;">🌾 Products</a>
+                <a href="#about" style="color: white; text-decoration: none; padding: 12px 20px; border-radius: 25px; background: rgba(255,255,255,0.15); font-weight: 500; font-size: 16px; transition: all 0.3s; white-space: nowrap;">ℹ️ About</a>
+                <a href="#services" style="color: white; text-decoration: none; padding: 12px 20px; border-radius: 25px; background: rgba(255,255,255,0.15); font-weight: 500; font-size: 16px; transition: all 0.3s; white-space: nowrap;">⚙️ Services</a>
+                <a href="cont.html" style="color: white; text-decoration: none; padding: 12px 20px; border-radius: 25px; background: rgba(255,255,255,0.15); font-weight: 500; font-size: 16px; transition: all 0.3s; white-space: nowrap;">📞 Contact</a>
+                <a href="#cart" style="background: rgba(255,255,255,0.25); color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; white-space: nowrap;">🛒 Cart (0)</a>
             </div>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" style="background: rgba(102, 126, 234, 0.95); backdrop-filter: blur(10px); max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
-            <ul style="list-style: none; margin: 0; padding: 20px;">
-                <li style="margin-bottom: 10px;"><a href="#home" style="color: white; text-decoration: none; display: block; padding: 15px; font-size: 1.1em;">🏠 Home</a></li>
-                <li style="margin-bottom: 10px;"><a href="#products" style="color: white; text-decoration: none; display: block; padding: 15px; font-size: 1.1em;">🌾 Products</a></li>
-                <li style="margin-bottom: 10px;"><a href="#about" style="color: white; text-decoration: none; display: block; padding: 15px; font-size: 1.1em;">ℹ️ About</a></li>
-                <li style="margin-bottom: 10px;"><a href="#services" style="color: white; text-decoration: none; display: block; padding: 15px; font-size: 1.1em;">⚙️ Services</a></li>
-                <li style="margin-bottom: 20px;"><a href="#contact" style="color: white; text-decoration: none; display: block; padding: 15px; font-size: 1.1em;">📞 Contact</a></li>
-                <a href="#cart" style="display: block; background: rgba(255,255,255,0.2); color: white; padding: 15px 20px; border-radius: 10px; text-decoration: none; font-weight: bold; text-align: center;">🛒 Cart (0)</a>
-            </ul>
         </div>
     </nav>
 
-    <style>
-        a:hover { background: rgba(255,255,255,0.3); transform: translateY(-2px); }
-        #hamburger span:nth-child(1) { transition: transform 0.3s; }
-        #hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
-        #hamburger.active span:nth-child(2) { opacity: 0; }
-        #hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-        @media (max-width: 768px) {
-            #nav-menu { display: none; }
-            #hamburger { display: flex !important; }
-        }
-        @media (max-width: 768px) {
-            #mobile-menu.active { max-height: 400px; }
-        }
-    </style>
-
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navMenu = document.getElementById('nav-menu');
-        
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-        
-        // Close mobile menu when clicking on a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-    </script>
-
-    <!-- Sample content -->
-    <div style="padding: 100px 20px; text-align: center;">
-        <h1 style="color: #667eea;">Your Website Content Goes Here</h1>
-        <p>This navbar works perfectly with your contact page and shop pages!</p>
+    <!-- Sample Content -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+        <h1 style="color: #667eea; text-align: center;">✅ Perfect Responsive Navbar</h1>
+        <p style="text-align: center; font-size: 1.2em; color: #666;">
+            Works on Desktop, Tablet, Mobile. No JS, no external files, pure inline CSS.
+        </p>
+        <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 40px;">
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+                <h3 style="color: #667eea;">🌾 Products Section</h3>
+                <p>Your agriculture products go here...</p>
+            </div>
+            <div style="background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); flex: 1; min-width: 300px;">
+                <h3 style="color: #667eea;">📞 Contact Section</h3>
+                <p>Connect with Virbhabreshwer Krushi Seva Kendra...</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
